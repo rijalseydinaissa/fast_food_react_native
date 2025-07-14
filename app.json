@@ -41,7 +41,8 @@
           "project": "react-native-fast-food",
           "organization": "rijal-dev"
         }
-      ]
+      ],
+      "expo-asset"
     ],
     "experiments": {
       "typedRoutes": true
