@@ -1,5 +1,4 @@
 import {Account, Client, Avatars, Databases, ID, Query,Storage} from "react-native-appwrite";
-import {string} from "postcss-selector-parser";
 import {Category, CreateUserPrams, GetMenuParams, SignInParams} from "@/type";
 
 export const appwriteConfig={
@@ -55,6 +54,15 @@ export const signIn =  async ({email,password}:SignInParams)=>{
 
 }
 
+export const signOut = async ()=>{
+    try {
+            await account.deleteSession('current');
+    }catch (error) {
+        console.error('Error signing out: ',error)
+        throw new Error(error as string)
+    }
+}
+
 export const getCurrentUser = async ()=>{
     try {
        const currentAccount = await account.get();
@@ -71,6 +79,8 @@ export const getCurrentUser = async ()=>{
         throw new Error(e as string)
     }
 }
+
+
 
 export const getMenu = async ({category,query}:GetMenuParams)=>{
     try {
