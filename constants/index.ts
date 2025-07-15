@@ -40,6 +40,8 @@ import pizzaOne from "@/assets/images/pizza-one.png";
 import salad from "@/assets/images/salad.png";
 import success from "@/assets/images/success.png";
 import tomatoes from "@/assets/images/tomatoes.png";
+import ins from "@/assets/images/ins.png";
+
 
 export const CATEGORIES = [
     {
@@ -159,6 +161,7 @@ export const toppings = [
 
 export const images = {
     avatar,
+    ins,
     avocado,
     bacon,
     burgerOne,

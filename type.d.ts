@@ -20,6 +20,15 @@ export interface User extends Models.Document {
     name: string;
     email: string;
     avatar: string;
+    Telephone: string;
+    Addresse: string;
+    bio: string;
+    birthday: string;
+    gender: string;
+    password: string;
+    is_admin: boolean;
+    is_active: boolean;
+    is_verified: boolean;
 }
 
 export interface CartCustomization {
